@@ -1,0 +1,33 @@
+PODS:
+  - Flutter (1.0.0)
+  - HaishinKit (1.0.11):
+    - Logboard (~> 2.1.3)
+  - Logboard (2.1.3)
+  - video_player (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - HaishinKit (~> 1.0.10)
+  - video_player (from `.symlinks/plugins/video_player/ios`)
+
+SPEC REPOS:
+  trunk:
+    - HaishinKit
+    - Logboard
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  video_player:
+    :path: ".symlinks/plugins/video_player/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  HaishinKit: 5aee58de6ea8b78644d8fb1c19668cbc1833ca64
+  Logboard: e74ec2d9941abd22f4db3a3ddcd0735011df92c7
+  video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
+
+PODFILE CHECKSUM: f0cb0e34b2851215383bf10082a4f88d29e268c7
+
+COCOAPODS: 1.9.3
