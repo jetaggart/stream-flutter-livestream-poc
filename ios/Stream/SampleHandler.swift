@@ -32,7 +32,7 @@ open class SampleHandler: RPBroadcastSampleHandler {
         
         
         rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
-        rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
+//        rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
     }
     
     override open func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
@@ -71,7 +71,7 @@ open class SampleHandler: RPBroadcastSampleHandler {
         }
         switch code {
         case RTMPConnection.Code.connectSuccess.rawValue:
-            // rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
+            rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
             break
         default:
             break

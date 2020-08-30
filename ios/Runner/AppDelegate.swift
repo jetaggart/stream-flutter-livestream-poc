@@ -67,12 +67,12 @@ import VideoToolbox
 //        rtmpStream.attachScreen(ScreenCaptureSession(shared: UIApplication.shared), useScreenSize: false)
 
 
-        let hkView = HKView(frame: window!.rootViewController!.view.bounds)
-        hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        hkView.attachStream(rtmpStream)
-//
-        // add ViewController#view
-        window!.rootViewController!.view.addSubview(hkView)
+//        let hkView = HKView(frame: window!.rootViewController!.view.bounds)
+//        hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//        hkView.attachStream(rtmpStream)
+////
+//        // add ViewController#view
+//        window!.rootViewController!.view.addSubview(hkView)
 
         rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
         rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
