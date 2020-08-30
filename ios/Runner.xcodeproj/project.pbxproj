@@ -3,18 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
+		37C3D8EBFD99BAE1591461E7 /* Pods_Stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC02334EE4B77B3D0FBC7EB3 /* Pods_Stream.framework */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 		9C60B1B8C4C0471A989CF3AB /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46AEBDA25FADA80392FC79B /* Pods_Runner.framework */; };
+		F154FB6C24FAD5F70037D596 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1863F1324FAD51B00FC8C85 /* ReplayKit.framework */; };
+		F154FB6F24FAD5F70037D596 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154FB6E24FAD5F70037D596 /* SampleHandler.swift */; };
+		F154FB7624FAD5F70037D596 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1863F1324FAD51B00FC8C85 /* ReplayKit.framework */; };
+		F154FB7724FAD5F70037D596 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1863F1F24FAD51B00FC8C85 /* UIKit.framework */; };
+		F154FB7A24FAD5F70037D596 /* BroadcastSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F154FB7924FAD5F70037D596 /* BroadcastSetupViewController.swift */; };
+		F154FB7E24FAD5F70037D596 /* StreamSetupUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F154FB7524FAD5F70037D596 /* StreamSetupUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F154FB8124FAD5F70037D596 /* Stream.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F154FB6B24FAD5F70037D596 /* Stream.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F154FB7C24FAD5F70037D596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F154FB7424FAD5F70037D596;
+			remoteInfo = StreamSetupUI;
+		};
+		F154FB7F24FAD5F70037D596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F154FB6A24FAD5F70037D596;
+			remoteInfo = Stream;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
@@ -27,6 +52,18 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1863F3324FAD51B00FC8C85 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F154FB8124FAD5F70037D596 /* Stream.appex in Embed App Extensions */,
+				F154FB7E24FAD5F70037D596 /* StreamSetupUI.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +71,7 @@
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		32A2A384B5BBD68DB1D3AB54 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		5353829D1A2DCE707D1E152D /* Pods-Stream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream.debug.xcconfig"; path = "Target Support Files/Pods-Stream/Pods-Stream.debug.xcconfig"; sourceTree = "<group>"; };
 		6FF6B05885082628E73D0B47 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +84,19 @@
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46AEBDA25FADA80392FC79B /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC02334EE4B77B3D0FBC7EB3 /* Pods_Stream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE4BF7DA556F33CDFEBFF2C1 /* Pods-Stream.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream.profile.xcconfig"; path = "Target Support Files/Pods-Stream/Pods-Stream.profile.xcconfig"; sourceTree = "<group>"; };
+		F154FB6B24FAD5F70037D596 /* Stream.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stream.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F154FB6E24FAD5F70037D596 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		F154FB7024FAD5F70037D596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F154FB7524FAD5F70037D596 /* StreamSetupUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreamSetupUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F154FB7924FAD5F70037D596 /* BroadcastSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastSetupViewController.swift; sourceTree = "<group>"; };
+		F154FB7B24FAD5F70037D596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F154FB8B24FAD74F0037D596 /* HaishinKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HaishinKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1863F1324FAD51B00FC8C85 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		F1863F1F24FAD51B00FC8C85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F93ABCF4B57B752353B1F45E /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		FA778C094BE1D85BEA954831 /* Pods-Stream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream.release.xcconfig"; path = "Target Support Files/Pods-Stream/Pods-Stream.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +108,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F154FB6824FAD5F70037D596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F154FB6C24FAD5F70037D596 /* ReplayKit.framework in Frameworks */,
+				37C3D8EBFD99BAE1591461E7 /* Pods_Stream.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F154FB7224FAD5F70037D596 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F154FB7624FAD5F70037D596 /* ReplayKit.framework in Frameworks */,
+				F154FB7724FAD5F70037D596 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		21CA73C9E23ACB4D80223ED3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F154FB8B24FAD74F0037D596 /* HaishinKit.framework */,
 				A46AEBDA25FADA80392FC79B /* Pods_Runner.framework */,
+				F1863F1324FAD51B00FC8C85 /* ReplayKit.framework */,
+				F1863F1F24FAD51B00FC8C85 /* UIKit.framework */,
+				DC02334EE4B77B3D0FBC7EB3 /* Pods_Stream.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,6 +147,9 @@
 				6FF6B05885082628E73D0B47 /* Pods-Runner.debug.xcconfig */,
 				32A2A384B5BBD68DB1D3AB54 /* Pods-Runner.release.xcconfig */,
 				F93ABCF4B57B752353B1F45E /* Pods-Runner.profile.xcconfig */,
+				5353829D1A2DCE707D1E152D /* Pods-Stream.debug.xcconfig */,
+				FA778C094BE1D85BEA954831 /* Pods-Stream.release.xcconfig */,
+				DE4BF7DA556F33CDFEBFF2C1 /* Pods-Stream.profile.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -95,6 +170,8 @@
 			children = (
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
+				F154FB6D24FAD5F70037D596 /* Stream */,
+				F154FB7824FAD5F70037D596 /* StreamSetupUI */,
 				97C146EF1CF9000F007C117D /* Products */,
 				3E28244484CC922E8F5EBFCC /* Pods */,
 				21CA73C9E23ACB4D80223ED3 /* Frameworks */,
@@ -105,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				97C146EE1CF9000F007C117D /* Runner.app */,
+				F154FB6B24FAD5F70037D596 /* Stream.appex */,
+				F154FB7524FAD5F70037D596 /* StreamSetupUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +203,24 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
+		F154FB6D24FAD5F70037D596 /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				F154FB6E24FAD5F70037D596 /* SampleHandler.swift */,
+				F154FB7024FAD5F70037D596 /* Info.plist */,
+			);
+			path = Stream;
+			sourceTree = "<group>";
+		};
+		F154FB7824FAD5F70037D596 /* StreamSetupUI */ = {
+			isa = PBXGroup;
+			children = (
+				F154FB7924FAD5F70037D596 /* BroadcastSetupViewController.swift */,
+				F154FB7B24FAD5F70037D596 /* Info.plist */,
+			);
+			path = StreamSetupUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,15 +236,53 @@
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				D766505F6D3B29F75167C081 /* [CP] Embed Pods Frameworks */,
+				F1863F3324FAD51B00FC8C85 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F154FB7D24FAD5F70037D596 /* PBXTargetDependency */,
+				F154FB8024FAD5F70037D596 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			productName = Runner;
 			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F154FB6A24FAD5F70037D596 /* Stream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F154FB8624FAD5F70037D596 /* Build configuration list for PBXNativeTarget "Stream" */;
+			buildPhases = (
+				B877E32754438F46AD38E976 /* [CP] Check Pods Manifest.lock */,
+				F154FB6724FAD5F70037D596 /* Sources */,
+				F154FB6824FAD5F70037D596 /* Frameworks */,
+				F154FB6924FAD5F70037D596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stream;
+			productName = Stream;
+			productReference = F154FB6B24FAD5F70037D596 /* Stream.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F154FB7424FAD5F70037D596 /* StreamSetupUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F154FB8224FAD5F70037D596 /* Build configuration list for PBXNativeTarget "StreamSetupUI" */;
+			buildPhases = (
+				F154FB7124FAD5F70037D596 /* Sources */,
+				F154FB7224FAD5F70037D596 /* Frameworks */,
+				F154FB7324FAD5F70037D596 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreamSetupUI;
+			productName = StreamSetupUI;
+			productReference = F154FB7524FAD5F70037D596 /* StreamSetupUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,12 +290,19 @@
 		97C146E61CF9000F007C117D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 1100;
+					};
+					F154FB6A24FAD5F70037D596 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					F154FB7424FAD5F70037D596 = {
+						CreatedOnToolsVersion = 11.6;
 					};
 				};
 			};
@@ -178,6 +320,8 @@
 			projectRoot = "";
 			targets = (
 				97C146ED1CF9000F007C117D /* Runner */,
+				F154FB6A24FAD5F70037D596 /* Stream */,
+				F154FB7424FAD5F70037D596 /* StreamSetupUI */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +335,20 @@
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F154FB6924FAD5F70037D596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F154FB7324FAD5F70037D596 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +383,28 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
 		};
+		B877E32754438F46AD38E976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stream-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D226B0F847E81F1EA1BA97AE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,19 +432,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh",
-				"${PODS_ROOT}/../Flutter/Flutter.framework",
-				"${BUILT_PRODUCTS_DIR}/HaishinKit/HaishinKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Logboard/Logboard.framework",
-				"${BUILT_PRODUCTS_DIR}/video_player/video_player.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flutter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HaishinKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Logboard.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/video_player.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -283,7 +456,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F154FB6724FAD5F70037D596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F154FB6F24FAD5F70037D596 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F154FB7124FAD5F70037D596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F154FB7A24FAD5F70037D596 /* BroadcastSetupViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F154FB7D24FAD5F70037D596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F154FB7424FAD5F70037D596 /* StreamSetupUI */;
+			targetProxy = F154FB7C24FAD5F70037D596 /* PBXContainerItemProxy */;
+		};
+		F154FB8024FAD5F70037D596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F154FB6A24FAD5F70037D596 /* Stream */;
+			targetProxy = F154FB7F24FAD5F70037D596 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		97C146FA1CF9000F007C117D /* Main.storyboard */ = {
@@ -359,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -496,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -527,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
@@ -553,6 +758,180 @@
 			};
 			name = Release;
 		};
+		F154FB8324FAD5F70037D596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9859SVS5F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StreamSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterGaming.StreamSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F154FB8424FAD5F70037D596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9859SVS5F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StreamSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterGaming.StreamSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F154FB8524FAD5F70037D596 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9859SVS5F;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = StreamSetupUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterGaming.StreamSetupUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Profile;
+		};
+		F154FB8724FAD5F70037D596 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5353829D1A2DCE707D1E152D /* Pods-Stream.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9859SVS5F;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Stream/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterGaming.Stream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F154FB8824FAD5F70037D596 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA778C094BE1D85BEA954831 /* Pods-Stream.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9859SVS5F;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Stream/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterGaming.Stream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F154FB8924FAD5F70037D596 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE4BF7DA556F33CDFEBFF2C1 /* Pods-Stream.profile.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W9859SVS5F;
+				ENABLE_BITCODE = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Stream/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterGaming.Stream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Profile;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +951,26 @@
 				97C147061CF9000F007C117D /* Debug */,
 				97C147071CF9000F007C117D /* Release */,
 				249021D4217E4FDB00AE95B9 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F154FB8224FAD5F70037D596 /* Build configuration list for PBXNativeTarget "StreamSetupUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F154FB8324FAD5F70037D596 /* Debug */,
+				F154FB8424FAD5F70037D596 /* Release */,
+				F154FB8524FAD5F70037D596 /* Profile */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F154FB8624FAD5F70037D596 /* Build configuration list for PBXNativeTarget "Stream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F154FB8724FAD5F70037D596 /* Debug */,
+				F154FB8824FAD5F70037D596 /* Release */,
+				F154FB8924FAD5F70037D596 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

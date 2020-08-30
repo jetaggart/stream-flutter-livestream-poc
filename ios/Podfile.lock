@@ -2,6 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - HaishinKit (1.0.11):
     - Logboard (~> 2.1.3)
+  - LFLiveKit-ReplayKit (0.0.1)
   - Logboard (2.1.3)
   - video_player (0.0.1):
     - Flutter
@@ -9,11 +10,13 @@ PODS:
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - HaishinKit (~> 1.0.10)
+  - LFLiveKit-ReplayKit
   - video_player (from `.symlinks/plugins/video_player/ios`)
 
 SPEC REPOS:
   trunk:
     - HaishinKit
+    - LFLiveKit-ReplayKit
     - Logboard
 
 EXTERNAL SOURCES:
@@ -25,9 +28,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   HaishinKit: 5aee58de6ea8b78644d8fb1c19668cbc1833ca64
+  LFLiveKit-ReplayKit: 41197ffbd60306d10632543f822810d4f5835d77
   Logboard: e74ec2d9941abd22f4db3a3ddcd0735011df92c7
   video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
 
-PODFILE CHECKSUM: f0cb0e34b2851215383bf10082a4f88d29e268c7
+PODFILE CHECKSUM: fa6ae4e01f41bc3c9fe13f9c9a977198c59ae194
 
 COCOAPODS: 1.9.3

@@ -2,6 +2,8 @@ import UIKit
 import Flutter
 import HaishinKit
 import AVFoundation
+import ReplayKit
+import VideoToolbox
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -54,29 +56,29 @@ import AVFoundation
             print(error)
         }
 
-        let rtmpConnection = RTMPConnection()
-        let rtmpStream = RTMPStream(connection: rtmpConnection)
-        rtmpStream.attachAudio(AVCaptureDevice.default(for: AVMediaType.audio)) { error in
-             print(error)
-        }
-        rtmpStream.attachCamera(DeviceUtil.device(withPosition: .back)) { error in
-             print(error)
-        }
-//        rtmpStream.attachScreen(ScreenCaptureSession(shared: UIApplication.shared))
+//        let rtmpConnection = RTMPConnection()
+//        let rtmpStream = RTMPStream(connection: rtmpConnection)
+//        rtmpStream.attachAudio(AVCaptureDevice.default(for: AVMediaType.audio)) { error in
+//             print(error)
+//        }
+//        rtmpStream.attachCamera(DeviceUtil.device(withPosition: .back)) { error in
+//             print(error)
+//        }
+////        rtmpStream.attachScreen(ScreenCaptureSession(shared: UIApplication.shared), useScreenSize: false)
 //
 //
-        let hkView = HKView(frame: window!.rootViewController!.view.bounds)
-        hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        hkView.attachStream(rtmpStream)
+//        let hkView = HKView(frame: window!.rootViewController!.view.bounds)
+//        hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//        hkView.attachStream(rtmpStream)
+////
+//        // add ViewController#view
+//        window!.rootViewController!.view.addSubview(hkView)
 //
-        // add ViewController#view
-        window!.rootViewController!.view.addSubview(hkView)
-        //stream key: 7e100396-0219-fb9a-2560-49896fbbfbac
-        
-        rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
-        rtmpStream.publish("a5c0f3e5-0e51-27f7-5768-88da68e387f8")
+//        rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
+//        rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
         print("working??")
 
         result(true)
     }
 }
+//
