@@ -4,20 +4,12 @@ import VideoToolbox
 
 @available(iOS 10.0, *)
 open class SampleHandler: RPBroadcastSampleHandler {
-    private lazy var rtmpConnection: RTMPConnection = {
-        let conneciton = RTMPConnection()
-        conneciton.addEventListener(.rtmpStatus, selector: #selector(rtmpStatusEvent), observer: self)
-        conneciton.addEventListener(.ioError, selector: #selector(rtmpErrorHandler), observer: self)
-        return conneciton
-    }()
-    
-    private lazy var rtmpStream: RTMPStream = {
-        RTMPStream(connection: rtmpConnection)
-    }()
+    private var rtmpConnection: RTMPConnection?
+    private var rtmpStream: RTMPStream?
     
     deinit {
-        rtmpConnection.removeEventListener(.ioError, selector: #selector(rtmpErrorHandler), observer: self)
-        rtmpConnection.removeEventListener(.rtmpStatus, selector: #selector(rtmpStatusEvent), observer: self)
+//        rtmpConnection.removeEventListener(.ioError, selector: #selector(rtmpErrorHandler), observer: self)
+//        rtmpConnection.removeEventListener(.rtmpStatus, selector: #selector(rtmpStatusEvent), observer: self)
     }
     
     override open func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
@@ -30,27 +22,28 @@ open class SampleHandler: RPBroadcastSampleHandler {
          */
         
         
-        
-        rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
-//        rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
+        rtmpConnection = RTMPConnection()
+        rtmpStream = RTMPStream(connection: rtmpConnection!)
+        rtmpConnection!.connect("rtmp://global-live.mux.com:5222/app")
+        rtmpStream!.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
     }
     
     override open func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
         switch sampleBufferType {
         case .video:
-            if let description = CMSampleBufferGetFormatDescription(sampleBuffer) {
-                let dimensions = CMVideoFormatDescriptionGetDimensions(description)
-                rtmpStream.videoSettings = [
-                    .width: dimensions.width,
-                    .height: dimensions.height ,
-                    .profileLevel: kVTProfileLevel_H264_Baseline_AutoLevel
-                ]
-            }
-            rtmpStream.appendSampleBuffer(sampleBuffer, withType: .video)
+//            if let description = CMSampleBufferGetFormatDescription(sampleBuffer) {
+//                let dimensions = CMVideoFormatDescriptionGetDimensions(description)
+//                rtmpStream.videoSettings = [
+//                    .width: dimensions.width,
+//                    .height: dimensions.height ,
+//                    .profileLevel: kVTProfileLevel_H264_Baseline_AutoLevel
+//                ]
+//            }
+            rtmpStream!.appendSampleBuffer(sampleBuffer, withType: .video)
         case .audioApp:
             break
         case .audioMic:
-            rtmpStream.appendSampleBuffer(sampleBuffer, withType: .audio)
+            rtmpStream!.appendSampleBuffer(sampleBuffer, withType: .audio)
         @unknown default:
             break
         }
@@ -58,7 +51,7 @@ open class SampleHandler: RPBroadcastSampleHandler {
     
     @objc
     private func rtmpErrorHandler(_ notification: Notification) {
-        rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
+        rtmpConnection!.connect("rtmp://global-live.mux.com:5222/app")
     }
     
     @objc
@@ -71,7 +64,7 @@ open class SampleHandler: RPBroadcastSampleHandler {
         }
         switch code {
         case RTMPConnection.Code.connectSuccess.rawValue:
-            rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
+//            rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
             break
         default:
             break
