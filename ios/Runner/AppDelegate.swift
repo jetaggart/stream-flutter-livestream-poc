@@ -56,26 +56,26 @@ import VideoToolbox
             print(error)
         }
 
-//        let rtmpConnection = RTMPConnection()
-//        let rtmpStream = RTMPStream(connection: rtmpConnection)
-//        rtmpStream.attachAudio(AVCaptureDevice.default(for: AVMediaType.audio)) { error in
-//             print(error)
-//        }
-//        rtmpStream.attachCamera(DeviceUtil.device(withPosition: .back)) { error in
-//             print(error)
-//        }
-////        rtmpStream.attachScreen(ScreenCaptureSession(shared: UIApplication.shared), useScreenSize: false)
+        let rtmpConnection = RTMPConnection()
+        let rtmpStream = RTMPStream(connection: rtmpConnection)
+        rtmpStream.attachAudio(AVCaptureDevice.default(for: AVMediaType.audio)) { error in
+             print(error)
+        }
+        rtmpStream.attachCamera(DeviceUtil.device(withPosition: .back)) { error in
+             print(error)
+        }
+//        rtmpStream.attachScreen(ScreenCaptureSession(shared: UIApplication.shared), useScreenSize: false)
+
+
+        let hkView = HKView(frame: window!.rootViewController!.view.bounds)
+        hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        hkView.attachStream(rtmpStream)
 //
-//
-//        let hkView = HKView(frame: window!.rootViewController!.view.bounds)
-//        hkView.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//        hkView.attachStream(rtmpStream)
-////
-//        // add ViewController#view
-//        window!.rootViewController!.view.addSubview(hkView)
-//
-//        rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
-//        rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
+        // add ViewController#view
+        window!.rootViewController!.view.addSubview(hkView)
+
+        rtmpConnection.connect("rtmp://global-live.mux.com:5222/app")
+        rtmpStream.publish("6dd5f379-abe7-0a5e-2841-0e4e5b162997")
         print("working??")
 
         result(true)
