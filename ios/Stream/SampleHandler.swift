@@ -6,12 +6,12 @@ import VideoToolbox
 open class SampleHandler: RPBroadcastSampleHandler {
     private var rtmpConnection: RTMPConnection?
     private var rtmpStream: RTMPStream?
-    
+
     deinit {
         rtmpConnection!.removeEventListener(.ioError, selector: #selector(rtmpErrorHandler), observer: self)
         rtmpConnection!.removeEventListener(.rtmpStatus, selector: #selector(rtmpStatusEvent), observer: self)
     }
-    
+
     override open func broadcastStarted(withSetupInfo setupInfo: [String: NSObject]?) {
         /*
          let logger = Logboard.with(HaishinKitIdentifier)
@@ -20,15 +20,15 @@ open class SampleHandler: RPBroadcastSampleHandler {
          logger.level = .debug
          logger.appender = socket
          */
-        
-        
+
+
         rtmpConnection = RTMPConnection()
         rtmpConnection!.addEventListener(.ioError, selector: #selector(rtmpErrorHandler), observer: self)
         rtmpConnection!.addEventListener(.rtmpStatus, selector: #selector(rtmpStatusEvent), observer: self)
         rtmpStream = RTMPStream(connection: rtmpConnection!)
         rtmpConnection!.connect("rtmp://global-live.mux.com:5222/app/", arguments: nil)
     }
-    
+
     override open func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
         switch sampleBufferType {
         case .video:
@@ -51,12 +51,12 @@ open class SampleHandler: RPBroadcastSampleHandler {
             break
         }
     }
-    
+
     @objc
     private func rtmpErrorHandler(_ notification: Notification) {
         rtmpConnection!.connect("rtmp://global-live.mux.com:5222/app/")
     }
-    
+
     @objc
     private func rtmpStatusEvent(_ status: Notification) {
         let e = Event.from(status)

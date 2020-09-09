@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    platform.invokeMethod('streamScreen');
+    // platform.invokeMethod('streamScreen');
   }
 
   @override
